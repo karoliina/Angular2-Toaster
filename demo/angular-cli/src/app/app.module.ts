@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ToasterModule } from 'angular2-toaster';
+import { ToasterModule, ToasterService } from 'angular2-toaster';
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +20,9 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     ToasterModule
   ],
-  providers: [],
+  providers: [
+    ToasterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
