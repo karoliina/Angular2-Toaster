@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ToasterService, Toast, ToasterConfig } from 'angular2-toaster';
 
 @Component({
@@ -24,14 +24,14 @@ export class AppComponent implements AfterViewInit {
   constructor(private toasterService: ToasterService) { }
 
   ngAfterViewInit() {
-    let toast1: Toast = {
+    const toast1: Toast = {
       type: 'info',
       title: 'Container 1, this title should be blue',
       toastContainerId: 1
     };
     this.toasterService.pop(toast1);
 
-    let toast2: Toast = {
+    const toast2: Toast = {
       type: 'info',
       title: 'Container 2, this title should be red',
       toastContainerId: 2
